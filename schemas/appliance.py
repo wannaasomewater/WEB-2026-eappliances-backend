@@ -9,7 +9,6 @@ class ApplianceListSchema(BaseModel):
     appliance_name: str
     power_consumption: Optional[int] = None
     frequency: Optional[float] = None
-    emf_level: Optional[float] = None
     description: Optional[str] = None
     image_url: Optional[str] = None
     video_url: Optional[str] = None
@@ -36,7 +35,6 @@ class ApplianceDraftSchema(BaseModel):
     appliance_name: str
     power_consumption: Optional[int] = None
     frequency: Optional[float] = None
-    emf_level: Optional[float] = None
     description: Optional[str] = None
     image_url: Optional[str] = None
     video_url: Optional[str] = None

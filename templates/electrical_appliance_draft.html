@@ -11,7 +11,7 @@
         <h1>Добавление прибора</h1>
         
         {% if appliance %}
-        <form action="/draft/{{ appliance.id }}/publish" method="POST" class="appliance-form">
+        <form action="/draft/{{ appliance.id }}/publish" method="POST" enctype="multipart/form-data" class="appliance-form">
             <div class="media-column">
                 <div class="media-upload">
                     <label class="media-upload-label">
@@ -46,19 +46,19 @@
             <button type="submit" class="btn-primary">Опубликовать</button>
         </form>
         {% else %}
-        <form action="/draft/create" method="POST" class="appliance-form">
+        <form action="/draft/create" method="POST" enctype="multipart/form-data" class="appliance-form">
             <div class="media-column">
                 <div class="media-upload">
                     <label class="media-upload-label">
                         <span>Выбрать изображение</span>
-                        <input type="file" accept="image/*">
+                        <input type="file" accept="image/*" name="image">
                     </label>
                     <img src="/static/img/default.jpg" alt="По умолчанию" class="preview-image">
                 </div>
                 <div class="media-upload">
                     <label class="media-upload-label">
                         <span>Выбрать видео</span>
-                        <input type="file" accept="video/*">
+                        <input type="file" accept="video/*" name="video">
                     </label>
                     <video autoplay loop muted playsinline class="preview-video">
                         <source src="/static/img/default.mp4" type="video/mp4">

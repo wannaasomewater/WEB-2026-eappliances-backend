@@ -10,7 +10,6 @@ class ElectricalAppliance(Base):
     appliance_name = Column(String(100), nullable=False)
     power_consumption = Column(Integer, nullable=True)
     frequency = Column(Float, nullable=True)
-    emf_level = Column(Float, nullable=True)
     description = Column(Text, nullable=True)
     status = Column(String(20), default="draft", nullable=False)
     image_url = Column(String(255), nullable=True)
